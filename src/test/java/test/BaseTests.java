@@ -11,6 +11,7 @@ public class BaseTests {
         driver= new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
         System.out.println(driver.getTitle());
+        driver.quit();
 
     }
     public static void main(String[] args){
