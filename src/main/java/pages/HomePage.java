@@ -12,8 +12,9 @@ public class HomePage {
     public void clickLink(String clickText){
         driver.findElement(By.linkText(clickText)).click();
     }
-    public void clickHomeLink(){
-        clickLink("Home");
+    public JoinUs clickJoinUs(){
+        clickLink("JOIN US");
+        return new JoinUs(driver);
     }
     public void closeAds(){
         driver.findElement(cancelButton).click();

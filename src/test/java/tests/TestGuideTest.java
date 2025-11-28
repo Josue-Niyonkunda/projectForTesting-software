@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 public class TestGuideTest extends BaseTests {
     @Test
     public void testGuidTest(){
-        homePage.closeAds();
         String check=homePage.clickTestGuide().newWebsite();
         Assert.assertEquals(check,"Halloween Special 2023 with Paul Grossman and Larry Goddard");
     }

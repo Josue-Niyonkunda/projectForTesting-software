@@ -16,6 +16,7 @@ public class BaseTests {
         driver.get("https://candymapper.com/");
         System.out.println(driver.getTitle());
         homePage=new HomePage(driver);
+        homePage.closeAds();
 
     }
     @AfterMethod
