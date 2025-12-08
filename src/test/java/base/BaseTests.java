@@ -17,9 +17,4 @@ public class BaseTests {
         homePage=new HomePage(driver);
         homePage.closeAds();
     }
-    @AfterMethod
-    public void closeTest(){
-        driver.quit();
-    }
-
 }
