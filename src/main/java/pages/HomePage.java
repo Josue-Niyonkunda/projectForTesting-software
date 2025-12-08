@@ -2,11 +2,11 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 public class HomePage {
     private WebDriver driver;
+    String sandBoxText = "Sandbox Tools";
+    private By drop = By.linkText(sandBoxText.toUpperCase());
     private By cancelButton=By.id("popup-widget183-close-icon");
-    private By drop=By.xpath("//*[@id=\"2\"]");
     public HomePage(WebDriver driver){
         this.driver=driver;
     }
@@ -20,13 +20,12 @@ public class HomePage {
     public void closeAds(){
         driver.findElement(cancelButton).click();
     }
-
     public  TestGuide clickTestGuide(){
         clickLink("Test Guild Halloween Podcast Episodes");
         return new TestGuide(driver);
     }
-    public SandBoxPage dropdown(){
+    public void dropdown(){
+        driver.findElement(By.cssSelector("#\\32")).click();
         driver.findElement(drop).click();
-        return new SandBoxPage(driver);
     }
 }

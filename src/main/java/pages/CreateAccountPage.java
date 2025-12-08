@@ -13,18 +13,13 @@ public class CreateAccountPage {
     public CreateAccountPage(WebDriver driver){
         this.driver=driver;
     }
-    public void enterFirstName(String firstName){
+    public void enterUserDetails(String firstName, String lastName, String email, String phone) {
         driver.findElement(firstNameField).sendKeys(firstName);
-    }
-    public void enterLastName(String lastName){
         driver.findElement(lastNameField).sendKeys(lastName);
-    }
-    public void enterEmail(String email){
         driver.findElement(emailField).sendKeys(email);
-    }
-    public void enterPhone(String phone){
         driver.findElement(phoneField).sendKeys(phone);
     }
+
     public TextPage clickCreateAccountButton(){
         driver.findElement(createAccountButton).click();
         return new TextPage(driver);
