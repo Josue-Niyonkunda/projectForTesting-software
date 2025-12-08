@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class HomePage {
     private WebDriver driver;
     private By cancelButton=By.id("popup-widget183-close-icon");
+    private By drop=By.xpath("//*[@id=\"2\"]");
     public HomePage(WebDriver driver){
         this.driver=driver;
     }
@@ -23,5 +24,9 @@ public class HomePage {
     public  TestGuide clickTestGuide(){
         clickLink("Test Guild Halloween Podcast Episodes");
         return new TestGuide(driver);
+    }
+    public SandBoxPage dropdown(){
+        driver.findElement(drop).click();
+        return new SandBoxPage(driver);
     }
 }

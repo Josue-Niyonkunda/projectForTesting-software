@@ -29,6 +29,4 @@ public class CreateAccountPage {
         driver.findElement(createAccountButton).click();
         return new TextPage(driver);
     }
-
-
 }

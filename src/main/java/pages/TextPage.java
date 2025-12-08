@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class TextPage {
     private WebDriver driver;
-    private By text =By.xpath("//*[@id=\"bs-6\"]/span/div/div/div/div/div[2]/p");
+    private By text =By.cssSelector("#bs-6 > span > div > div > div > div > div:nth-child(3) > p");
     public TextPage(WebDriver driver){
         this.driver=driver;
     }
