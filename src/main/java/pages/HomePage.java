@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.time.Duration;
+
 public class HomePage {
     private WebDriver driver;
     String sandBoxText = "Sandbox Tools";
@@ -26,6 +29,7 @@ public class HomePage {
     }
     public void dropdown(){
         driver.findElement(By.cssSelector("#\\32")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(drop).click();
     }
 }
