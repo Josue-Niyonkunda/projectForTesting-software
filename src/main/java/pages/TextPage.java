@@ -10,7 +10,7 @@ public class TextPage {
         this.driver=driver;
     }
     public String getText1()  {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver.findElement(text).getText();
     }
 }

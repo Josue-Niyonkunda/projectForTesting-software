@@ -19,6 +19,7 @@ public class BaseTests {
     }
     @AfterMethod
     public void tearsDown(){
+
         driver.quit();
     }
 }

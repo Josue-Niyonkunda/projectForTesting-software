@@ -18,7 +18,6 @@ public class CreateAccountPage {
         driver.findElement(emailField).sendKeys(email);
         driver.findElement(phoneField).sendKeys(phone);
     }
-
     public TextPage clickCreateAccountButton(){
         driver.findElement(createAccountButton).click();
         return new TextPage(driver);

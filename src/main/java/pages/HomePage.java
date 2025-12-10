@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class HomePage {
@@ -28,7 +30,9 @@ public class HomePage {
     }
     public void dropdown(){
         driver.findElement(By.cssSelector("#\\32")).click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(drop)));
+//
         driver.findElement(drop).click();
     }
 }
