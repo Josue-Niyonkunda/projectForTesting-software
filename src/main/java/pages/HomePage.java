@@ -32,7 +32,6 @@ public class HomePage {
         driver.findElement(By.cssSelector("#\\32")).click();
         WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(drop)));
-//
         driver.findElement(drop).click();
     }
 }
