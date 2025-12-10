@@ -1,8 +1,5 @@
 package pages;
-
 import org.openqa.selenium.WebDriver;
-
-import java.sql.Driver;
 
 public class TestGuide {
     private WebDriver driver;

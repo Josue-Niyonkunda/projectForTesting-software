@@ -1,10 +1,7 @@
 package tests;
-
 import base.BaseTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class JoinUsTest extends BaseTests {
     @Test

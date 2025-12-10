@@ -6,5 +6,4 @@ public class DropDownTest extends BaseTests {
     @Test
     public void testDropDown(){
         homePage.dropdown();
-    }
-}
+    }}
